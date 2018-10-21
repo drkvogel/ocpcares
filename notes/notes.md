@@ -21,3 +21,41 @@ only saves mkv?
 
 
 ### openshot
+
+
+## scaffolding
+
+### generator
+
+```
+npm install -g yo
+yo                      # run "Static Webapp"
+npm run                 # list run scripts
+npm start               # falls over
+npm run dev             # same
+npm install             # yo had run this anyway, but run again to be sure
+npm run                 # still falls over
+npm run dev             # same
+npm run start:dev       # same
+./node_modules/webpack-cli/bin/webpack.js   # generates the error
+npm list | grep webpack                     # 2.1.something
+npm install webpack-cli@latest
+npm run dev             # doesn't fall over, but page displays ENOENT ./dist/[something] - do you have to build it first
+npm run start:dev       # same
+npm run testdev         # runs tests?
+npm run dev             # later, works...?
+```
+
+### generator-h5package
+
+```
+ cd Projects/misc
+ mkdir generator-h5package
+ cd generator-h5package             # test folder
+ yo                                 # choose h5package
+ npm run                            # lists run scripts
+ npm start                          # falls over, webpack error
+ npm install webpack-cli@latest     # install latest webpack-cli
+ npm start                          # works, displays page
+ ```
+
