@@ -8,20 +8,49 @@ https://clipchamp.com/en/blog/2017/optimize-videos-web-design
 
 ## Video editors (for Mac)
 
+Convert whole film into low res before cutting up
+
+### iMovie
+
+lowest res is 540 which is still too big for mobile
+you can't seem to save a project file to remember all the markers
+
 ### avidemux
 
 How to Cut/Split Video using Avidemux
-Open and select the file you want to split (File / Open).
+>Open and select the file you want to split (File / Open).
 Then, with the bar below, select the point where we want to start our video and clicking on the letter A using icon ( or press [ ) and mark point B ( or press ] ) where you want to end (cut) your video.
 Finally from the menu select File / Save / Save Video.
 
-only saves mkv?
+Easiest so far to cut out clips, but only saves mkv?
+    oh, you set the format in the sidebar
+    what about quality?
+has trouble setting markers finely...
+
+### DaVince Resolve
+
+Free? version of professional software suite?
 
 ### shotcut
 
+how do you use this?
+seems to struggle with a whole film
 
 ### openshot
 
+setting markers is tricky
+wide range of outputs, including 320 for mobile
+can save project file with markers
+playback seems to get stuck at low speed - no obvious way to cancel
+no skip to next marker control
+
+### MPEG Streamclip
+
+ui fubar - wtf?
+
+### Blender
+
+does video editing - https://www.blender.org/features/video-editing/
 
 ## scaffolding
 
@@ -62,9 +91,13 @@ npm run dev             # later, works...?
 ### generator-pwa
 
 has bug: package-lock.json created outside app folder · Issue #18 · hemanth/generator-pwa (https://github.com/hemanth/generator-pwa/issues/18)
-
-doesn't do hot reload
+    but easily solved by moving package-lock.json into the correct folder
+doesn't do hot reload? yes it does (serves from source folder)
+doesn't do linting
+doesn't do bundling - have to add jQuery manually
 
 ## deployment
 
-`surge` publishes to http://living-orange.surge.sh/
+`surge` publishes to e.g. http://living-orange.surge.sh/, or a domain of your choosing with 
+
+netlify wouldn't auth repos with github, send support request
