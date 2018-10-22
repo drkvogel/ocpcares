@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# https://surge.sh/help/remembering-a-domain
+surge --domain ocpcares.surge.sh
