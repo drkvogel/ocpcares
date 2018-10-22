@@ -38,7 +38,7 @@ function showClip() {
 	vidSource.attr('src', vidPath);
 	$('#main').hide();
 	// $('#vidcontainer').show();
-	$('#loading').show();
+	$('#loading').fadeIn(2000);
 	vid.load();
 	vid.play();
 }
@@ -50,7 +50,7 @@ function rand(min, max) { // Returns a random integer between min (inclusive) an
 function videoBegin() {
 	console.log("started");
 	$('#loading').hide();
-	$('#vidcontainer').fadeIn(2000);
+	$('#vidcontainer').show();
 }
 
 function videoEnd() {
@@ -62,7 +62,7 @@ function videoEnd() {
 var vids = [
 	"wecare-short",
 	"ifyoucantstandtheheat",
-	// "goodluckfrank",
+	"goodluckfrank",
 	"ocp-morons"
 ];
 // "stayoutofthekitchen"
