@@ -1,3 +1,5 @@
+
+// set up service worker
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('../sw.js', { scope: '/' }).then((reg) => {
 		if (reg.installing) {
@@ -25,15 +27,29 @@ if ('serviceWorker' in navigator) {
   }
 }
 
-function showClip() {
-	console.log("TODO: showClip()");
-	$('#main').hide();
-	$('#vidcontainer').show();
-	var vid = $('#vid').get(0); 
-	vid.play();
-}
-
 $().ready(function () { //$(document).ready(
 	console.log('jQuery Document ready');
-	// getConfig();
 });
+
+function showClip() {
+	console.log("showClip()");
+	vidSource.attr('src', 'video/wecare-short.mp4');
+	$('#main').hide();
+	$('#vidcontainer').show();
+	var vid = $('#vid').get(0);
+	setTimeout(() => {
+		console.log('timeout');
+		vid.load();
+		vid.play();
+	}, 1000);
+}
+
+function videoEnd() {
+	console.log("ended");
+	$('#vidcontainer').hide();
+	$('#main').show();
+}
+
+var vid = $('#vid').get(0);
+var vidSource = $('#vid>source');
+vid.addEventListener('ended', videoEnd, false);
