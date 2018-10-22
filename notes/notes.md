@@ -3,6 +3,11 @@
 ## ToDo
 
 `ended` event doesn't alway fire - add timeout?
+favicon doesn't show on chrome, does on firefox
+file size is too big - 4Mb in total
+how can we fit all the content onscreen vertically e.g. on a laptop it's too wide 
+on mobile it's slow loading clips, should display a loading image (e.g. OCP logo)
+in chrome, sometimes, width of content is much smaller than width of viewport and content is unresponsive to click...
 
 ## defer
 
