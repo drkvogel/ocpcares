@@ -32,18 +32,25 @@ function showClip() {
 	do {
 		randNum = rand(0, vids.length - 1); 
 	} while (randNum == lastVid); // prevent last clip from playing again
-	lastVid = randNum; // console.log("rand: " + randNum + "; vid: " + vids[randNum]);
+	lastVid = randNum;  console.log("rand: " + randNum + "; vid: " + vids[randNum]);
 	
-	var vidPath = "video/" + vids[randNum] + ".mp4"; // console.log("vidPath: " + vidPath);
+	var vidPath = "video/" + vids[randNum] + ".mp4";  console.log("vidPath: " + vidPath);
 	vidSource.attr('src', vidPath);
 	$('#main').hide();
-	$('#vidcontainer').show();
+	// $('#vidcontainer').show();
+	$('#loading').show();
 	vid.load();
 	vid.play();
 }
 
 function rand(min, max) { // Returns a random integer between min (inclusive) and max (inclusive)
 	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function videoBegin() {
+	console.log("started");
+	$('#loading').hide();
+	$('#vidcontainer').fadeIn(2000);
 }
 
 function videoEnd() {
@@ -64,6 +71,7 @@ var lastVid = -1;
 var vid = $('#vid').get(0);
 var vidSource = $('#vid>source');
 vid.addEventListener('ended', videoEnd, false);
+vid.addEventListener('canplay', videoBegin, false);
 
 $().ready(function () { //$(document).ready(
 	console.log('jQuery Document ready');
