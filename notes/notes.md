@@ -25,7 +25,7 @@ only saves mkv?
 
 ## scaffolding
 
-### generator
+### generator-static-webapp
 
 ```
 npm install -g yo
@@ -59,3 +59,12 @@ npm run dev             # later, works...?
  npm start                          # works, displays page
  ```
 
+### generator-pwa
+
+has bug: package-lock.json created outside app folder · Issue #18 · hemanth/generator-pwa (https://github.com/hemanth/generator-pwa/issues/18)
+
+doesn't do hot reload
+
+## deployment
+
+`surge` publishes to http://living-orange.surge.sh/

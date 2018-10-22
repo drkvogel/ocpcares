@@ -21,13 +21,26 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
     <meta name="theme-color" content="#2F3BA2">
   </head>
-  <body>
-    <div id="content">
-       <img src="images/yeoman.png" />
-       <p> Check the console for service worker logs and after sw is active this image will load even when you are offline! </p>
-      
+  <body onclick="showClip()">
+    <div id="main">
+       <img src="images/your-move-creep-optimised.png" />
+       <br />
+       <br />
+       <p>Click on Robo to show a clip</p>
+       <br />
+       <p><small>&copy; Chris Bird 2018</small></p>
+       <p><small>And remember - we care</small></p>
+    </div>
+    <div id="vidcontainer" style="display: none">
+      <!-- <video width="320" height="240" controls> -->
+      <!-- <video autoplay> -->
+      <video id="vid">
+        <source src="video/wecare.mp4" type="video/mp4">
+        Your browser does not support the video tag. This app will not work on your device. Sorry!
+      </video>
     </div>
   </body>
   
+  <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/app.js"></script>
 </html>

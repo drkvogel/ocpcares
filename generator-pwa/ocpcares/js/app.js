@@ -24,3 +24,16 @@ if ('serviceWorker' in navigator) {
     });
   }
 }
+
+function showClip() {
+	console.log("TODO: showClip()");
+	$('#main').hide();
+	$('#vidcontainer').show();
+	var vid = $('#vid').get(0); 
+	vid.play();
+}
+
+$().ready(function () { //$(document).ready(
+	console.log('jQuery Document ready');
+	// getConfig();
+});
