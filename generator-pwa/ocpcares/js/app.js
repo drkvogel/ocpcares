@@ -33,7 +33,12 @@ $().ready(function () { //$(document).ready(
 
 function showClip() {
 	console.log("showClip()");
-	vidSource.attr('src', 'video/wecare-short.mp4');
+	var randNum = rand(0, vids.length - 1); 
+	console.log("rand: " + randNum + "; vid: " + vids[randNum]);
+	var vidPath = "video/" + vids[randNum] + ".mp4";
+	console.log("vidPath: " + vidPath);
+	// vidSource.attr('src', 'video/wecare-short.mp4');
+	vidSource.attr('src', vidPath);
 	$('#main').hide();
 	$('#vidcontainer').show();
 	var vid = $('#vid').get(0);
@@ -47,11 +52,20 @@ function showClip() {
 	// }, 1000);
 }
 
+function rand(min, max) { // Returns a random integer between min (inclusive) and max (inclusive)
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function videoEnd() {
 	console.log("ended");
 	$('#vidcontainer').hide();
 	$('#main').show();
 }
+
+var vids = [
+	"wecare-short",
+	"stayoutofthekitchen"
+];
 
 var vid = $('#vid').get(0);
 var vidSource = $('#vid>source');
