@@ -1,21 +1,21 @@
 
-## Video format
 
->MP4. MPEG-4 is the HTML5 supported file format that has been around longest
+## ToDo
 
-https://clipchamp.com/en/blog/2017/optimize-videos-web-design
->the best settings for background videos are either Web, 720p, medium quality, MP4 or WebM or Mobile, 720p, medium quality, MP4
+`ended` event doesn't alway fire - add timeout?
 
-## Video editors (for Mac)
+## defer
+
+### Video editors (for Mac)
 
 Convert whole film into low res before cutting up
 
-### iMovie
+#### iMovie
 
 lowest res is 540 which is still too big for mobile
 you can't seem to save a project file to remember all the markers
 
-### avidemux
+#### avidemux
 
 How to Cut/Split Video using Avidemux
 >Open and select the file you want to split (File / Open).
@@ -27,16 +27,16 @@ Easiest so far to cut out clips, but only saves mkv?
     what about quality?
 has trouble setting markers finely...
 
-### DaVince Resolve
+#### DaVince Resolve
 
 Free? version of professional software suite?
 
-### shotcut
+#### shotcut
 
 how do you use this?
 seems to struggle with a whole film
 
-### openshot
+#### openshot
 
 setting markers is tricky
 wide range of outputs, including 320 for mobile
@@ -44,15 +44,44 @@ can save project file with markers
 playback seems to get stuck at low speed - no obvious way to cancel
 no skip to next marker control
 
-### MPEG Streamclip
+#### MPEG Streamclip
 
 ui fubar - wtf?
 
-### Blender
+#### Blender
 
 does video editing - https://www.blender.org/features/video-editing/
 
-## scaffolding
+
+### deployment
+
+`surge` publishes to e.g. http://living-orange.surge.sh/, or a domain of your choosing with 
+
+netlify wouldn't auth repos with github, send support request
+
+### creating icons
+
+I found an image with a white background, opened it in GIMP, added a layer (which creates an alpha channel), used the magic wand to select the white, did Colours -> Colour to Alpha, saved.
+
+Then I loaded the image in https://realfavicongenerator.net/favicon_result?file_id=p1cqentrn0vbs1q4fbjg10tk1miq6#.W842BxNKiAw, which is "the bomb" and ["the way to go"](https://discourse.gohugo.io/t/what-if-i-wanna-create-things-like-favicon-and-apple-touch-icon/1050/6), rather than doing it manually somehow in GIMP or similar.
+
+I downloaded a zip file to /images, and now am working out where to put those files and how to link it all up.
+
+I need to change `manifest.json` to reflect this.
+
+## done
+
+### html5 video source src attribute
+
+html5 video source src attribute must be present even if empty, otherwise the video won't load even if src is set later.
+https://stackoverflow.com/questions/1944271/html5-video-tag-with-no-source
+
+```html
+<video>
+    <source src="">
+```
+
+### scaffolding
 
 ### generator-static-webapp
 
@@ -96,28 +125,9 @@ doesn't do hot reload? yes it does (serves from source folder)
 doesn't do linting
 doesn't do bundling - have to add jQuery manually
 
-## deployment
+### Video format
 
-`surge` publishes to e.g. http://living-orange.surge.sh/, or a domain of your choosing with 
+>MP4. MPEG-4 is the HTML5 supported file format that has been around longest
 
-netlify wouldn't auth repos with github, send support request
-
-html5 video source src attribute must be present even if empty, otherwise the video won't load even if src is set later.
-https://stackoverflow.com/questions/1944271/html5-video-tag-with-no-source
-
-```html
-<video>
-    <source src="">
-```
-
-### creating icons
-
-I found an image with a white background, opened it in GIMP, added a layer (which creates an alpha channel), used the magic wand to select the white, did Colours -> Colour to Alpha, saved.
-
-Then I loaded the image in https://realfavicongenerator.net/favicon_result?file_id=p1cqentrn0vbs1q4fbjg10tk1miq6#.W842BxNKiAw, which is "the bomb" and ["the way to go"](https://discourse.gohugo.io/t/what-if-i-wanna-create-things-like-favicon-and-apple-touch-icon/1050/6), rather than doing it manually somehow in GIMP or similar.
-
-I downloaded a zip file to /images, and now am working out where to put those files and how to link it all up.
-
-I need to change `manifest.json` to reflect this.
-
-
+https://clipchamp.com/en/blog/2017/optimize-videos-web-design
+>the best settings for background videos are either Web, 720p, medium quality, MP4 or WebM or Mobile, 720p, medium quality, MP4
