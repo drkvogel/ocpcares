@@ -1,7 +1,7 @@
 
 {
   "short_name": "ocpcares",
-  "name": "ocpcares",
+  "name": "OCP Cares",
   "display": "standalone",
   "icons": [{
         "src": "images/touch/icon-128x128.png",
