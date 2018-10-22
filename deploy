@@ -1,4 +1,9 @@
 #!/bin/bash
 
-cd generator-pwa/ocpcares
-./surge
+# cd generator-pwa/ocpcares
+# ./surge
+
+cd src
+
+# https://surge.sh/help/remembering-a-domain
+surge --domain ocpcares.surge.sh
