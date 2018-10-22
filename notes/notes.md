@@ -101,3 +101,23 @@ doesn't do bundling - have to add jQuery manually
 `surge` publishes to e.g. http://living-orange.surge.sh/, or a domain of your choosing with 
 
 netlify wouldn't auth repos with github, send support request
+
+html5 video source src attribute must be present even if empty, otherwise the video won't load even if src is set later.
+https://stackoverflow.com/questions/1944271/html5-video-tag-with-no-source
+
+```html
+<video>
+    <source src="">
+```
+
+### creating icons
+
+I found an image with a white background, opened it in GIMP, added a layer (which creates an alpha channel), used the magic wand to select the white, did Colours -> Colour to Alpha, saved.
+
+Then I loaded the image in https://realfavicongenerator.net/favicon_result?file_id=p1cqentrn0vbs1q4fbjg10tk1miq6#.W842BxNKiAw, which is "the bomb" and ["the way to go"](https://discourse.gohugo.io/t/what-if-i-wanna-create-things-like-favicon-and-apple-touch-icon/1050/6), rather than doing it manually somehow in GIMP or similar.
+
+I downloaded a zip file to /images, and now am working out where to put those files and how to link it all up.
+
+I need to change `manifest.json` to reflect this.
+
+
