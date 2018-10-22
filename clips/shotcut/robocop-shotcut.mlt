@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="en_GB" version="6.11.0" title="Shotcut version 18.10.08" producer="main_bin">
+  <profile description="automatic" width="1920" height="1040" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1920" display_aspect_den="1040" frame_rate_num="24000" frame_rate_den="1001" colorspace="709"/>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="01:43:20.145">
+    <property name="length">148655</property>
+    <property name="eof">pause</property>
+    <property name="resource">black</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="01:43:20.145"/>
+  </playlist>
+  <producer id="producer0" title="Anonymous Submission" in="00:00:00.000" out="01:43:17.017">
+    <property name="length">01:43:17:01</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/kvogel/Projects/ocpcares/clips/Robocop.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">18892ff516f739d3ff96c54e1df48801</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Robocop.mp4</property>
+    <property name="shotcut:detail">/Users/kvogel/Projects/ocpcares/clips/Robocop.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" title="Anonymous Submission" in="00:00:00.000" out="01:43:17.017">
+    <property name="length">01:43:17:01</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/kvogel/Projects/ocpcares/clips/Robocop.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">18892ff516f739d3ff96c54e1df48801</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Robocop.mp4</property>
+    <property name="shotcut:detail">/Users/kvogel/Projects/ocpcares/clips/Robocop.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" title="Anonymous Submission" in="00:00:00.000" out="01:43:17.017">
+    <property name="length">01:43:17:01</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/kvogel/Projects/ocpcares/clips/Robocop.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">18892ff516f739d3ff96c54e1df48801</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">Robocop.mp4</property>
+    <property name="shotcut:detail">/Users/kvogel/Projects/ocpcares/clips/Robocop.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <blank length="00:00:03.128"/>
+    <entry producer="producer0" in="00:00:00.000" out="00:07:37.829"/>
+    <entry producer="producer1" in="00:07:37.871" out="00:07:44.670"/>
+    <entry producer="producer2" in="00:07:44.711" out="01:43:17.017"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 18.10.08" global_feed="1" in="00:00:00.000" out="01:43:20.145">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
