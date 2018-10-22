@@ -37,11 +37,14 @@ function showClip() {
 	$('#main').hide();
 	$('#vidcontainer').show();
 	var vid = $('#vid').get(0);
-	setTimeout(() => {
-		console.log('timeout');
-		vid.load();
-		vid.play();
-	}, 1000);
+	vid.load();
+	vid.play();
+
+	// setTimeout(() => {
+	// 	console.log('timeout');
+	// 	vid.load();
+	// 	vid.play();
+	// }, 1000);
 }
 
 function videoEnd() {
