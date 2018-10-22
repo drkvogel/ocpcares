@@ -21,35 +21,25 @@ if ('serviceWorker' in navigator) {
       messageChannel.port1.onmessage = function(event) {
         resolve(`Direct message from SW: ${event.data}`);
       };
-
       navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2])
     });
   }
 }
 
-$().ready(function () { //$(document).ready(
-	console.log('jQuery Document ready');
-});
-
 function showClip() {
 	console.log("showClip()");
-	var randNum = rand(0, vids.length - 1); 
-	console.log("rand: " + randNum + "; vid: " + vids[randNum]);
-	var vidPath = "video/" + vids[randNum] + ".mp4";
-	console.log("vidPath: " + vidPath);
-	// vidSource.attr('src', 'video/wecare-short.mp4');
+	var randNum;
+	do {
+		randNum = rand(0, vids.length - 1); 
+	} while (randNum == lastVid); // prevent last clip from playing again
+	lastVid = randNum; // console.log("rand: " + randNum + "; vid: " + vids[randNum]);
+	
+	var vidPath = "video/" + vids[randNum] + ".mp4"; // console.log("vidPath: " + vidPath);
 	vidSource.attr('src', vidPath);
 	$('#main').hide();
 	$('#vidcontainer').show();
-	var vid = $('#vid').get(0);
 	vid.load();
 	vid.play();
-
-	// setTimeout(() => {
-	// 	console.log('timeout');
-	// 	vid.load();
-	// 	vid.play();
-	// }, 1000);
 }
 
 function rand(min, max) { // Returns a random integer between min (inclusive) and max (inclusive)
@@ -64,9 +54,17 @@ function videoEnd() {
 
 var vids = [
 	"wecare-short",
-	"stayoutofthekitchen"
+	"ifyoucantstandtheheat",
+	// "goodluckfrank",
+	"ocp-morons"
 ];
+// "stayoutofthekitchen"
 
+var lastVid = -1;
 var vid = $('#vid').get(0);
 var vidSource = $('#vid>source');
 vid.addEventListener('ended', videoEnd, false);
+
+$().ready(function () { //$(document).ready(
+	console.log('jQuery Document ready');
+});
