@@ -11,6 +11,31 @@ in chrome, sometimes, width of content is much smaller than width of viewport an
 
 ## defer
 
+pulling down on PWA on android phone seems to update PWA
+
+### Video converters
+
+#### avconvert
+
+installed `avconvert` with `brew install libav`. One of the presets sounds promising:
+
+    avconvert -p PresetAppleM4VCellular -s source.mp4 -o output.mp4
+
+e.g.:
+
+    [  1:55am ]  [ kvogel@kvogel-macbook-2018:~/Projects/ocpcares/clips/openshot(master✗) ]
+    $ avconvert -p PresetAppleM4VCellular -s wecare-short.mp4 -o wecare-avconvert-PresetAppleM4VCellular.mp4
+
+not bad:
+
+    -rw-r--r--@ 1 kvogel  staff   187K 22 Oct 12:03 wecare-short.mp4
+    -rw-r--r--@ 1 kvogel  staff   114K 23 Oct 01:56 wecare-avconvert-PresetAppleM4VCellular.mp4
+
+#### ffmpegx
+
+installed ffmpegx from https://www.ffmpegx.com/download.html.
+
+
 ### Video editors (for Mac)
 
 Convert whole film into low res before cutting up
@@ -60,9 +85,15 @@ does video editing - https://www.blender.org/features/video-editing/
 
 ### deployment
 
-`surge` publishes to e.g. http://living-orange.surge.sh/, or a domain of your choosing with 
+#### surge
 
-netlify wouldn't auth repos with github, send support request
+`surge` publishes to e.g. http://living-orange.surge.sh/, or a domain of your choosing e.g. `surge --domain ocpcares.surgh.sh`.
+
+#### netlify
+
+netlify wouldn't auth repos with github, sent support request
+2018-10-23 02:08:25 works now, looks very slick
+    https://hungry-wright-9eae3c.netlify.com/
 
 ### creating icons
 
