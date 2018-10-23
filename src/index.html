@@ -8,7 +8,6 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="/css/styles.css">
-    <!-- <link rel="shortcut icon" type="image/png" href="/favicon.ico"/> -->
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="PWA">
@@ -16,33 +15,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <!-- <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
     <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
-    <!-- <meta name="msapplication-TileColor" content="#2F3BA2"> -->
     <meta name="theme-color" content="#2F3BA2">
 
     <!-- from https://realfavicongenerator.net/favicon_result?file_id=p1cqentrn0vbs1q4fbjg10tk1miq6#.W842BxNKiAw -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png?v=alQnGPamLX">
     <link rel="icon" type="image/png" sizes="32x32" href="images/touch/favicon-32x32.png?v=alQnGPamLX">
     <link rel="icon" type="image/png" sizes="16x16" href="images/touch/favicon-16x16.png?v=alQnGPamLX">
-    <!-- <link rel="manifest" href="./images/touch/site.webmanifest?v=alQnGPamLX"> -->
+    <link rel="manifest" href="images/touch/site.webmanifest?v=alQnGPamLX">
     <link rel="mask-icon" href="images/touch/safari-pinned-tab.svg?v=alQnGPamLX" color="#5bbad5">
     <link rel="shortcut icon" href="images/touch/favicon.ico?v=alQnGPamLX">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="images/touch/browserconfig.xml?v=alQnGPamLX">
     <meta name="theme-color" content="#ffffff">
-
   </head>
   <body onclick="showClip()">
     <div id="main">
       <img src="images/your-move-creep-optimised.png" />
       <br />
-      <br />
       <p>Click on Robo to show a clip</p>
-      <br />
       <footer>
-        <p><small>&copy; Chris Bird 2018</small></p>
-        <p><small>And remember - we care</small></p>
+        <p><small>&copy; Chris Bird 2018. And remember - we care.</small></p>
       </footer>
     </div>
     <div id="loading" style="display: none">
@@ -51,15 +44,12 @@
       <img src="images/ocp.png" />
     </div>
     <div id="vidcontainer" style="display: none">
-      <!-- <video width="320" height="240" controls> -->
-      <!-- <video autoplay> -->
       <video id="vid">
         <source src="" type="video/mp4">
         Your browser does not support the video tag. This app will not work on your device. Sorry!
       </video>
     </div>
   </body>
-  
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/app.js"></script>
 </html>
