@@ -1,17 +1,19 @@
 
-
 ## ToDo
 
-`ended` event doesn't alway fire - add timeout?
-favicon doesn't show on chrome, does on firefox
 file size is too big - 4Mb in total
+centre vids and title vertically
 how can we fit all the content onscreen vertically e.g. on a laptop it's too wide 
-on mobile it's slow loading clips, should display a loading image (e.g. OCP logo)
-in chrome, sometimes, width of content is much smaller than width of viewport and content is unresponsive to click...
+how low can we go with vid quality?
+cut up film into quarters or eights with some overlap, easier to cut up
+switch between random and film order
+other movies e.g. Platoon, Withnail...
 
 ## defer
 
-pulling down on PWA on android phone seems to update PWA
+`ended` event doesn't alway fire - add timeout?
+in chrome, sometimes, width of content is much smaller than width of viewport and content is unresponsive to click...
+pulling down on PWA on android phone seems to update PWA - check
 
 ### Video converters
 
@@ -81,7 +83,7 @@ ui fubar - wtf?
 #### Blender
 
 does video editing - https://www.blender.org/features/video-editing/
-
+how?
 
 ### deployment
 
@@ -167,3 +169,12 @@ doesn't do bundling - have to add jQuery manually
 
 https://clipchamp.com/en/blog/2017/optimize-videos-web-design
 >the best settings for background videos are either Web, 720p, medium quality, MP4 or WebM or Mobile, 720p, medium quality, MP4
+
+### loading screen
+
+on mobile it's slow loading clips, should display a loading image (e.g. OCP logo)-
+
+
+
+favicon doesn't show on chrome, does on firefox
+    it does eventually
