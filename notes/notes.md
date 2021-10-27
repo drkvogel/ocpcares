@@ -7,7 +7,7 @@ how can we fit all the content onscreen vertically e.g. on a laptop it's too wid
 how low can we go with vid quality?
 cut up film into quarters or eights with some overlap, easier to cut up
 switch between random and film order
-other movies e.g. Platoon, Withnail...
+other movies/tv e.g. Platoon, Withnail, Spaced, ... genericise
 
 ## defer
 
@@ -20,19 +20,19 @@ pulling down on PWA on android phone seems to update PWA - check
 #### avconvert
 
 installed `avconvert` with `brew install libav`. One of the presets sounds promising:
-
-    avconvert -p PresetAppleM4VCellular -s source.mp4 -o output.mp4
-
+```
+avconvert -p PresetAppleM4VCellular -s source.mp4 -o output.mp4
+```
 e.g.:
-
-    [  1:55am ]  [ kvogel@kvogel-macbook-2018:~/Projects/ocpcares/clips/openshot(master✗) ]
-    $ avconvert -p PresetAppleM4VCellular -s wecare-short.mp4 -o wecare-avconvert-PresetAppleM4VCellular.mp4
-
+```
+[  1:55am ]  [ kvogel@kvogel-macbook-2018:~/Projects/ocpcares/clips/openshot(master✗) ]
+$ avconvert -p PresetAppleM4VCellular -s wecare-short.mp4 -o wecare-avconvert-PresetAppleM4VCellular.mp4
+```
 not bad:
-
-    -rw-r--r--@ 1 kvogel  staff   187K 22 Oct 12:03 wecare-short.mp4
-    -rw-r--r--@ 1 kvogel  staff   114K 23 Oct 01:56 wecare-avconvert-PresetAppleM4VCellular.mp4
-
+```
+-rw-r--r--@ 1 kvogel  staff   187K 22 Oct 12:03 wecare-short.mp4
+-rw-r--r--@ 1 kvogel  staff   114K 23 Oct 01:56 wecare-avconvert-PresetAppleM4VCellular.mp4
+```
 #### ffmpegx
 
 installed ffmpegx from https://www.ffmpegx.com/download.html.
@@ -173,8 +173,6 @@ https://clipchamp.com/en/blog/2017/optimize-videos-web-design
 ### loading screen
 
 on mobile it's slow loading clips, should display a loading image (e.g. OCP logo)-
-
-
 
 favicon doesn't show on chrome, does on firefox
     it does eventually
